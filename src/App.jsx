@@ -211,7 +211,7 @@ function App() {
 
   return (
     <>
-      <h1>Ønskelister</h1>
+      <h1>Ønskelister Fra Barna</h1>
       <div className="wishlist-container">
         {kidsWishlist.map((e) => (
           <KidsWishlist key={e.id} data={e} />

@@ -1,13 +1,17 @@
 .card {
-  height: 420px;
-  width: 260px;
-  background-image: url(assets/ch3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 300px;
+  height: 460px;
+  background: rgb(27, 228, 51);
+  background: radial-gradient(
+    circle,
+    rgba(111, 228, 27, 0.982) 0%,
+    rgba(1, 109, 11, 1) 95%
+  );
   border: 2px solid gold;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px 110px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
@@ -21,47 +25,82 @@
   font-style: normal;
   color: black;
   margin-top: 15px;
+  margin-left: 15px;
 }
 
 .card h2 {
   font-size: 26px;
   font-style: italic;
-  margin: 5px 0 5px;
-  color: darkgreen;
+  margin: 0 15px 5px;
+  color: rgb(1, 59, 207);
 }
 
 .card h3 {
   font-size: 16px;
-  color: yellowgreen;
-  margin-bottom: 30px;
   font-weight: 300;
+  margin: 0 15px 30px;
+  color: rgb(228, 244, 8);
 }
 
 .card p {
-  color: burlywood;
+  color: rgb(176, 9, 9);
+  font-size: 16px;
   font-weight: 600;
   font-family: "Times New Roman", Times, serif;
   display: flex;
   justify-content: flex-end;
-  margin: 15px 5px;
+  margin: 10px 20px;
 }
 
-.card ul {
-  list-style-type: none;
-  margin: 10px 0 0;
+.card p::after {
+  content: "😎";
 }
 
 .card li {
   border-radius: 5px;
   padding: 6px 0px;
-  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
+  font-style: italic;
   font-weight: 600;
-  color: black;
+  color: rgb(12, 2, 87);
 }
 
-@media (max-width: 370px) {
-  .card {
-    width: 100%;
+.card li::before {
+  content: "🎁";
+  padding: 5px;
+}
+
+/* Moving gradient effekt for "SNILLE BARN!" */
+.snille-barn {
+  position: relative;
+  overflow: hidden;
+}
+
+.snille-barn::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(90deg, #ff00ff, #ffff00, #00ffff, #ff00ff);
+  background-size: 300%;
+  border-radius: 10px;
+  animation: gradient-border 3s infinite;
+  z-index: -1;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
