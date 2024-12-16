@@ -1,5 +1,74 @@
-import "./app.css";
+import React from "react";
 import KidsWishlist from "./KidsWishlist";
+import styled, { createGlobalStyle, keyframes } from "styled-components";
+import bgImage from "./assets/ch3.jpg";
+
+const GlobalStyle = createGlobalStyle`
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Lucida Sans', sans-serif;    
+}
+
+body {
+   margin: 0;
+   padding:0;
+   height: 100%;
+}
+`;
+
+const AppContainer = styled.div`
+  background-image: url(${bgImage});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const scaleInOut = keyframes`
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1); 
+  }
+`;
+
+const Heading = styled.h1`
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(251, 226, 1);
+  font-style: italic;
+  font-size: 80px;
+  font-family: "Sriracha", cursive;
+  text-decoration: underline;
+  padding-top: 20px;
+  animation: ${scaleInOut} 3s infinite;
+`;
+
+const WishlistContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6rem;
+  padding: 5% 25%;
+  max-width: fit-content;
+  justify-self: center;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+  }
+`;
 
 function App() {
   const kidsWishlist = [
@@ -211,12 +280,15 @@ function App() {
 
   return (
     <>
-      <h1>Ønskelister Fra Barna</h1>
-      <div className="wishlist-container">
-        {kidsWishlist.map((e) => (
-          <KidsWishlist key={e.id} data={e} />
-        ))}
-      </div>
+      <GlobalStyle />
+      <AppContainer>
+        <Heading>Ønskelister Fra Barn</Heading>
+        <WishlistContainer>
+          {kidsWishlist.map((e) => (
+            <KidsWishlist key={e.id} data={e} />
+          ))}
+        </WishlistContainer>
+      </AppContainer>
     </>
   );
 }

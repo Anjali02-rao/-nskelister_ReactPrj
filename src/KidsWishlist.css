@@ -1,13 +1,9 @@
-.card {
+/* .card {
   width: 300px;
   height: 460px;
-  background: rgb(27, 228, 51);
-  background: radial-gradient(
-    circle,
-    rgba(111, 228, 27, 0.982) 0%,
-    rgba(1, 109, 11, 1) 95%
-  );
-  border: 2px solid gold;
+  background: #1be433;
+  background: radial-gradient(circle, #6fe41bfa 0%, #016d0b 95%);
+  border: 2px solid #ffd700;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -23,7 +19,7 @@
 .card h2:first-of-type {
   font-size: 14px;
   font-style: normal;
-  color: black;
+  color: hsl(0, 0%, 0%);
   margin-top: 15px;
   margin-left: 15px;
 }
@@ -74,7 +70,7 @@
 }
 
 /* Moving gradient effekt for "SNILLE BARN!" */
-.snille-barn {
+/* .snille-barn {
   position: relative;
   overflow: hidden;
 }
@@ -103,4 +99,4 @@
   100% {
     background-position: 0% 50%;
   }
-}
+} */ */
