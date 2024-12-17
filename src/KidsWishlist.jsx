@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Card = styled.div`
   width: 300px;
-  height: 420px;
+  height: 500px;
   background: radial-gradient(circle, rgba(145, 248, 71, 0.98) 0%, #016d0b 95%);
   border: 3px solid #ffd700;
   border-radius: 8px;
@@ -17,6 +17,17 @@ const Card = styled.div`
   &:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  &::before {
+    content: "✨✨✨✨✨✨✨✨✨✨";
+    margin-left: 5px;
+  }
+  &::after {
+    content: "✨✨✨✨✨✨✨✨✨✨";
+    position: absolute;
+    margin-left: 5px;
+    bottom: 5px;
+    text-align: center;
   }
 `;
 
@@ -69,8 +80,8 @@ const Character = styled.p`
   font-family: "Times New Roman", Times, serif;
   display: flex;
   justify-content: flex-end;
-  margin: 10px 20px;
-  padding: 10px;
+  margin: 10px 22px;
+  padding-top: 26px;
   &::after {
     content: "😎";
   }
@@ -84,8 +95,8 @@ const SnilleBarn = styled.div`
   font-size: 20px;
   font-weight: 600;
   color: rgb(176, 9, 9);
-  margin: 10px 20px;
-  padding: 10px;
+  margin: 10px 0;
+  padding: 26px;
   &::after {
     content: "🤩";
   }
