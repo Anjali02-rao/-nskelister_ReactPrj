@@ -3,18 +3,18 @@ import styled from "styled-components";
 
 const Card = styled.div`
   width: 300px;
-  height: 440px;
+  height: 400px;
   background: radial-gradient(circle, rgba(145, 248, 71, 0.98) 0%, #016d0b 95%);
   border: 3px solid #ffd700;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(238, 238, 238, 0.2);
   position: relative;
   padding: 5px;
   transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 
   &:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 10px rgba(239, 165, 165, 0.3);
   }
 
   &::before {
@@ -32,7 +32,7 @@ const Card = styled.div`
 const Name = styled.h2`
   font-size: 26px;
   font-style: italic;
-  margin: 0 15px 5px;
+  margin: 0 15px 0;
   padding: 5px 0 5px 0;
   color: rgb(1, 59, 207);
 `;
@@ -41,7 +41,7 @@ const ID = styled.h3`
   font-size: 14px;
   font-style: normal;
   color: hsl(0, 0%, 0%);
-  margin-top: 15px;
+  margin-top: 8px;
   margin-left: 15px;
   padding-top: 5px;
 `;
@@ -49,13 +49,13 @@ const ID = styled.h3`
 const Age = styled.h3`
   font-size: 16px;
   font-weight: 300;
-  margin: 0 15px 30px;
+  margin: 0 15px 20px;
   color: rgb(228, 244, 8);
 `;
 
 const ListItem = styled.li`
   border-radius: 5px;
-  padding: 6px 0px;
+  padding: 4px 0;
   display: flex;
   justify-content: center;
   align-items: center;

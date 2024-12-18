@@ -46,7 +46,7 @@ const scaleInOut = keyframes`
 const Heading = styled.h1`
   text-align: center;
   margin-bottom: 40px;
-  color: rgb(251, 226, 1);
+  color: rgb(235, 5, 5);
   font-style: italic;
   font-size: 60px;
   font-family: "Sriracha", cursive;
