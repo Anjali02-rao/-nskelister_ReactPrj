@@ -19,7 +19,7 @@ body {
 `;
 
 const AppContainer = styled.div`
-  background: linear-gradient(rgb(176, 90, 78) 0%, rgb(209, 39, 39) 95%);
+  background: linear-gradient(rgb(81, 89, 103), rgb(16, 16, 16));
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -282,14 +282,31 @@ function App() {
     <>
       <GlobalStyle />
       <AppContainer>
-        <Snowfall color="skyblue" height="300vh" snowflakeCount={200} />
+        <div
+          style={{
+            position: "relative",
+            width: "100vw",
+            overflow: "hidden",
+          }}
+        >
+          <Snowfall
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            snowflakeCount={600}
+          />
 
-        <Heading>Ønskelister Fra Barn</Heading>
-        <WishlistContainer>
-          {kidsWishlist.map((e) => (
-            <KidsWishlist key={e.id} data={e} />
-          ))}
-        </WishlistContainer>
+          <Heading>Ønskelister Fra Barn</Heading>
+          <WishlistContainer>
+            {kidsWishlist.map((e) => (
+              <KidsWishlist key={e.id} data={e} />
+            ))}
+          </WishlistContainer>
+        </div>
       </AppContainer>
     </>
   );
