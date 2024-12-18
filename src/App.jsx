@@ -1,7 +1,7 @@
 import React from "react";
 import KidsWishlist from "./KidsWishlist";
 import styled, { createGlobalStyle, keyframes } from "styled-components";
-import bgImage from "./assets/ch3.jpg";
+import Snowfall from "react-snowfall";
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -19,7 +19,7 @@ body {
 `;
 
 const AppContainer = styled.div`
-  background-image: url(${bgImage});
+  background: linear-gradient(rgb(176, 90, 78) 0%, rgb(209, 39, 39) 95%);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -48,7 +48,7 @@ const Heading = styled.h1`
   margin-bottom: 40px;
   color: rgb(251, 226, 1);
   font-style: italic;
-  font-size: 80px;
+  font-size: 60px;
   font-family: "Sriracha", cursive;
   text-decoration: underline;
   padding-top: 20px;
@@ -57,7 +57,7 @@ const Heading = styled.h1`
 
 const WishlistContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
   padding: 5% 25%;
   max-width: fit-content;
@@ -282,6 +282,8 @@ function App() {
     <>
       <GlobalStyle />
       <AppContainer>
+        <Snowfall color="skyblue" height="300vh" snowflakeCount={200} />
+
         <Heading>Ønskelister Fra Barn</Heading>
         <WishlistContainer>
           {kidsWishlist.map((e) => (

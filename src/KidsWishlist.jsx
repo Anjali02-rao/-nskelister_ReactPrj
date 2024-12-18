@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-// import { AppContainer } from "./App.jsx";
+import Snowfall from "react-snowfall";
 
 const Card = styled.div`
   width: 300px;
-  height: 500px;
+  height: 420px;
   background: radial-gradient(circle, rgba(145, 248, 71, 0.98) 0%, #016d0b 95%);
   border: 3px solid #ffd700;
   border-radius: 8px;
@@ -14,6 +14,10 @@ const Card = styled.div`
   transition: transform 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
   overflow: visible;
 
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(79, 29, 29, 0.3);
+  }
   &:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
@@ -81,14 +85,15 @@ const Character = styled.p`
   display: flex;
   justify-content: flex-end;
   margin: 10px 22px;
-  padding-top: 26px;
+  padding-top: 10px;
+  align-self: end;
   &::after {
     content: "😎";
   }
 `;
 
 const SnilleBarn = styled.div`
-  position: relative;
+  // position: sticky;
   font-family: "Times New Roman", Times, serif;
   display: flex;
   justify-content: flex-end;
@@ -101,19 +106,25 @@ const SnilleBarn = styled.div`
     content: "🤩";
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    background: linear-gradient(90deg, #ff00ff, #ffff00, #00ffff, #ff00ff);
-    background-size: 300%;
-    border-radius: 10px;
-    animation: gradient-border 3s infinite;
-    z-index: -1;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -4px;
+  //   left: -4px;
+  //   right: -4px;
+  //   bottom: -4px;
+  //   background: linear-gradient(
+  //     90deg,
+  //     rgb(228, 100, 228),
+  //     rgb(227, 227, 94),
+  //     rgb(109, 227, 227),
+  //     rgb(224, 96, 224)
+  //   );
+  //   background-size: 300%;
+  //   border-radius: 10px;
+  //   animation: gradient-border 3s infinite;
+  //   z-index: -1;
+  // }
 
   @keyframes gradient-border {
     0% {
@@ -149,5 +160,18 @@ export default function KidsWishlist({
         </SnilleBarn>
       )}
     </Card>
+  );
+}
+
+function App() {
+  return (
+    <div
+      style={{
+        height: "100vh",
+        background: "#1e3a5f",
+        color: "white",
+        textAlign: "center",
+      }}
+    ></div>
   );
 }
