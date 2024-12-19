@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Card = styled.div`
   width: 300px;
-  height: 400px;
+  height: 360px;
   background: radial-gradient(circle, rgba(145, 248, 71, 0.98) 0%, #016d0b 95%);
   border: 3px solid #ffd700;
   border-radius: 8px;
@@ -33,7 +33,7 @@ const Name = styled.h2`
   font-size: 26px;
   font-style: italic;
   margin: 0 15px 0;
-  padding: 5px 0 5px 0;
+  padding: 5px 0 2px 0;
   color: rgb(1, 59, 207);
 `;
 
@@ -49,7 +49,7 @@ const ID = styled.h3`
 const Age = styled.h3`
   font-size: 16px;
   font-weight: 300;
-  margin: 0 15px 20px;
+  margin: 0 15px 10px;
   color: rgb(228, 244, 8);
 `;
 
@@ -71,57 +71,25 @@ const ListItem = styled.li`
   }
 `;
 
-const Character = styled.p`
-  color: rgb(176, 9, 9);
-  font-size: 20px;
-  font-weight: 600;
-  font-family: "Times New Roman", Times, serif;
-  position: absolute;
-  bottom: 36px;
-  right: 15px;
-`;
-
 const SnilleBarn = styled.div`
   font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   color: rgb(176, 9, 9);
   position: absolute;
   bottom: 36px;
   right: 15px;
-}
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   // top: -4px;
-  //   // left: -4px;
-  //   // right: -4px;
-  //   // bottom: -4px;
-  //   // background: linear-gradient(
-  //   //   90deg,
-  //   //   rgb(228, 100, 228),
-  //   //   rgb(227, 227, 94),
-  //   //   rgb(109, 227, 227),
-  //   //   rgb(224, 96, 224)
-  //   // );
-  //   // background-size: 300%;
-  //   // border-radius: 10px;
-  //   animation: gradient-border 3s infinite;
-  //   z-index: -1;
-  // }
+  animation: scaleUp 1.5s infinite alternate;
 
-  // @keyframes gradient-border {
-  //   0% {
-  //     background-position: 0% 50%;
-  //   }
-  //   50% {
-  //     background-position: 100% 50%;
-    //  }
-    //  100% {
-    //    background-position: 0% 50%;
-    //  }
- }
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 `;
 
 export default function KidsWishlist({
@@ -138,10 +106,10 @@ export default function KidsWishlist({
           <ListItem key={index}>{e}</ListItem>
         ))}
       </ul>
-      {naughty && <Character>Naughty! 😎</Character>}
+
       {!naughty && (
         <SnilleBarn>
-          <p>Snille Barn! 🤩</p>
+          <p>🎅Snille Barn🎅</p>
         </SnilleBarn>
       )}
     </Card>
