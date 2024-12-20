@@ -5,7 +5,7 @@ const Card = styled.div`
   width: 300px;
   height: 360px;
   background: radial-gradient(circle, rgba(145, 248, 71, 0.98) 0%, #016d0b 95%);
-  border: 3px solid #ffd700;
+  border: 3px solid rgb(255, 215, 0);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(238, 238, 238, 0.2);
   position: relative;

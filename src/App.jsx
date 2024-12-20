@@ -46,7 +46,7 @@ const scaleInOut = keyframes`
 const Heading = styled.h1`
   text-align: center;
   margin-bottom: 40px;
-  color: rgb(235, 5, 5);
+  color: rgb(255, 215, 0);
   font-style: italic;
   font-size: 60px;
   font-family: "Sriracha", cursive;
@@ -297,7 +297,7 @@ function App() {
               width: "100%",
               height: "100%",
             }}
-            snowflakeCount={600}
+            snowflakeCount={200}
           />
 
           <Heading>Ønskelister Fra Barn</Heading>
