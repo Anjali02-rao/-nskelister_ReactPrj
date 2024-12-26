@@ -14,7 +14,7 @@ const Card = styled.div`
 
   &:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 10px rgba(239, 165, 165, 0.3);
+    box-shadow: 0 10px 8px rgba(239, 165, 165, 0.3);
   }
 
   &::before {

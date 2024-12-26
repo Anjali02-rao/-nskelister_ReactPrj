@@ -65,7 +65,6 @@ const WishlistContainer = styled.div`
 
   @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
-    gap: 40px;
     justify-items: center;
   }
 `;
